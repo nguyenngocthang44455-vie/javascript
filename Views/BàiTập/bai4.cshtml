@@ -1,0 +1,101 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <style>
+        .todo-box {
+            width: 350px;
+            margin: 40px auto;
+            border: 1px solid #e0e0e0;
+            background-color: #f2f2f2;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            font-family: Arial, sans-serif;
+        }
+
+        .header-box {
+            display: flex;
+            background-color: #384252;
+        }
+
+            .header-box input[type="text"] {
+                flex: 1;
+                padding: 12px 15px;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                color: white;
+                font-size: 16px;
+            }
+
+                .header-box input[type="text"]::placeholder {
+                    color: #8c9ba5;
+                }
+
+        .btn-add {
+            width: 50px;
+            background-color: #1dd1a1;
+            color: white;
+            border: none;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .todo-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: white;
+        }
+
+            .todo-list li {
+                padding: 12px 15px;
+                border-bottom: 1px solid #eee;
+                display: flex;
+                align-items: center;
+            }
+
+                .todo-list li input[type="checkbox"] {
+                    margin-right: 12px;
+                    transform: scale(1.2);
+                    cursor: pointer;
+                }
+
+                .todo-list li span {
+                    font-size: 15px;
+                    color: #333;
+                }
+    </style>
+</head>
+<body>
+
+    <div class="todo-box">
+        <div class="header-box">
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            <button type="button" class="btn-add" onclick="addTask()">+</button>
+        </div>
+        <ul id="taskList" class="todo-list">
+            <li>
+                <input type="checkbox" checked onchange="this.nextElementSibling.style.textDecoration = this.checked ? 'line-through' : 'none'; this.nextElementSibling.style.color = this.checked ? '#aaa' : '#333';">
+                <span style="text-decoration: line-through; color: #aaa;">Việc 1</span>
+            </li>
+            <li>
+                <input type="checkbox" onchange="this.nextElementSibling.style.textDecoration = this.checked ? 'line-through' : 'none'; this.nextElementSibling.style.color = this.checked ? '#aaa' : '#333';">
+                <span>Việc 2</span>
+            </li>
+            <li>
+                <input type="checkbox" onchange="this.nextElementSibling.style.textDecoration = this.checked ? 'line-through' : 'none'; this.nextElementSibling.style.color = this.checked ? '#aaa' : '#333';">
+                <span>Việc 3</span>
+            </li>
+        </ul>
+    </div>
+
+    <script src="~/Scripts/my js/Bai4.js"></script>
+</body>
+</html>

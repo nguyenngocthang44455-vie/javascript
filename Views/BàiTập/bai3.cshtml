@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đồng hồ kỹ thuật số</title>
+    <style>
+        .clock-container {
+            background-color: black;
+            color: #00bcd4;
+            width: 450px;
+            padding: 30px 0;
+            text-align: center;
+            margin: 50px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        .clock-text {
+            font-size: 45px;
+            font-weight: bold;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body onload="updateClock();">
+    <div class="clock-container">
+        <h2 id="clock" class="clock-text">00:00:00 AM</h2>
+    </div>
+
+    <script src="~/Scripts/my js/Bai3.js"></script>
+</body>
+</html>

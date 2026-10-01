@@ -1,0 +1,69 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>bai1</title>
+    <script src="~/Scripts/my js/bai1.js"></script>
+</head>
+<body>
+    <div style="border: 1px solid #ccc; width: 550px; padding: 20px; margin: 20px auto;">
+        <h2>PHIẾU THAM GIA CLB TIN HỌC <span style="color: blue;">LUBU</span></h2>
+        <form onsubmit="return DangKy();">
+            <table>
+                <tr>
+                    <td>Mã sinh viên</td>
+                    <td><input type="text" id="mssv"></td>
+                    <td><span id="err_mssv" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td>Họ và tên</td>
+                    <td><input type="text" id="hoten"></td>
+                    <td><span id="err_hoten" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td>Tuổi</td>
+                    <td><input type="text" id="tuoi"></td>
+                    <td><span id="err_tuoi" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td>Ngoại ngữ</td>
+                    <td>
+                        <input type="checkbox" id="chk_anh"> Anh
+                        <input type="checkbox" id="chk_phap"> Pháp
+                        <input type="checkbox" id="chk_nhat"> Nhật
+                    </td>
+                    <td><span id="res_ngoaingu" style="color: blue;"></span></td>
+                </tr>
+                <tr>
+                    <td>Chuyên ngành</td>
+                    <td>
+                        <select id="chuyennganh" onchange="changeChuyenNganh();">
+                            <option value="">--Chọn chuyên ngành--</option>
+                            <option value="hethong">Hệ thống</option>
+                            <option value="phanmem">Phần mềm</option>
+                            <option value="mang">Mạng máy tính</option>
+                        </select>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Sở trường</td>
+                    <td><input type="text" id="sotruong" readonly></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Đăng ký"></td>
+                    <td><span id="status" style="color: blue;"></span></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

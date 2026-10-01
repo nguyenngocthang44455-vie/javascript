@@ -1,0 +1,56 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thông tin giao hàng</title>
+    <script src="JS/bai2.js"></script>
+</head>
+<body>
+    <div style="border: 1px solid #000; width: 650px; padding: 20px; margin: 20px auto; font-family: Arial, sans-serif;">
+        <h3 style="margin-top: 0;">Thông tin giao hàng</h3>
+        <form onsubmit="return Luu();">
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 50%; vertical-align: top;">
+                        <label>Tên</label><br>
+                        <input type="text" id="ten" style="width: 90%;"><br>
+                        <span id="err_ten" style="color: red; font-size: 12px;"></span>
+                        <br><br>
+                        <label>Số điện thoại</label><br>
+                        <input type="text" id="sdt" style="width: 90%;"><br>
+                        <span id="err_sdt" style="color: red; font-size: 12px;"></span>
+                    </td>
+                    <td style="width: 50%; vertical-align: top;">
+                        <label>Địa chỉ nhận hàng</label><br>
+                        <input type="text" id="diachi" style="width: 90%;"><br>
+                        <span id="err_diachi" style="color: red; font-size: 12px;"></span>
+                        <br><br>
+                        <label>Tỉnh / Thành phố</label><br>
+                        <input type="text" id="tinh" style="width: 90%;"><br>
+                        <span id="err_tinh" style="color: red; font-size: 12px;"></span>
+                        <br><br>
+                        <label>Quận / Huyện</label><br>
+                        <input type="text" id="quan" style="width: 90%;"><br>
+                        <span id="err_quan" style="color: red; font-size: 12px;"></span>
+                        <br><br>
+                        <label>Phường / Xã</label><br>
+                        <input type="text" id="phuong" style="width: 90%;"><br>
+                        <span id="err_phuong" style="color: red; font-size: 12px;"></span>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <label>Lựa chọn tên cho địa chỉ thường dùng</label><br>
+            <button type="button" onclick="chonLoaiDiaChi('vanphong')" style="background-color: #206ec5; color: white; border: none; padding: 5px 10px; cursor: pointer;">Văn phòng</button>
+            <button type="button" onclick="chonLoaiDiaChi('nharieng')" style="background-color: #5cb85c; color: white; border: none; padding: 5px 10px; cursor: pointer;">Nhà riêng</button>
+            <br><br>
+            <input type="submit" value="Lưu" style="background-color: #d9534f; color: white; border: none; padding: 5px 15px; cursor: pointer;">
+        </form>
+    </div>
+</body>
+</html>
